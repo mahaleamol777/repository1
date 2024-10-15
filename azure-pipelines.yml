@@ -16,7 +16,7 @@ resources:
 
 stages:
 - stage: Stage1
-  displayName: "Push Changes to Repository1"
+  displayName: "Push Changes to Repository2"
   pool:
     vmImage: 'ubuntu-latest'
   jobs:
