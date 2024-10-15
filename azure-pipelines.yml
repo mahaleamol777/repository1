@@ -6,12 +6,12 @@ resources:
     - repository: repository1
       type: github
       name: mahaleamol777/repository1
-      ref: main
+#      ref: main
       endpoint: github-PAT
     - repository: repository2
       type: github
       name: mahaleamol777/repository2
-      ref: main
+#      ref: main
       endpoint: github-PAT
 
 stages:
