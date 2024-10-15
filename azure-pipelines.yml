@@ -3,11 +3,16 @@ trigger:
 
 resources:
   repositories:
+    - repository: repository1
+      type: github
+      name: mahaleamol777/repository1
+      ref: main
+      endpoint: github-PAT
     - repository: repository2
       type: github
       name: mahaleamol777/repository2
       ref: main
-      endpoint: 
+      endpoint: github-PAT
 
 stages:
 - stage: Stage1
