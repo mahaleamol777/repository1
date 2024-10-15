@@ -32,7 +32,7 @@ stages:
         git config --global user.email "mahale.amol777@gmail.com"
         git add newfile.txt
         git commit -m "Commit from Azure DevOps pipeline"
-        git push origin main
+        git push -u origin main
       displayName: 'Commit and Push Changes to Repository1'
 
 - stage: Stage2
