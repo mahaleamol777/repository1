@@ -28,7 +28,7 @@ stages:
     - script: |
         git config --global user.name "amol"
         git config --global user.email "mahale.amol777@gmail.com"
-        git clone https://mahale.amol777@gmail.com:Akshay@ak1995@github.com/mahaleamol777/repository2.git
+        git clone "https://mahale.amol777@gmail.com:Akshay@ak1995@github.com/mahaleamol777/repository2.git"
         cd repository2
         git checkout -b main
         echo "New change from Azure DevOps pipeline" >> newfile2.txt
