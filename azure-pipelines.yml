@@ -30,7 +30,6 @@ stages:
         git config --global user.email "mahale.amol777@gmail.com"
         git clone https://github.com/mahaleamol777/repository2.git
         cd repository2
-        git checkout -b main
         echo "New change from Azure DevOps pipeline" >> newfile2.txt
         git add newfile.txt
         git commit -m "Commit from Azure DevOps pipeline"
