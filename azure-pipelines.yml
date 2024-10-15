@@ -28,6 +28,8 @@ stages:
     - script: |
         git checkout -b repository1@main
         echo "New change from Azure DevOps pipeline" >> newfile.txt
+        git config --global user.name "amol"
+        git config --global user.email "mahale.amol777@gmail.com"
         git add newfile.txt
         git commit -m "Commit from Azure DevOps pipeline"
         git push -u origin main
