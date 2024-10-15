@@ -22,8 +22,8 @@ stages:
   jobs:
   - job: PushChanges
     steps:
-#    - checkout: repository1
-#      persistCredentials: true
+    - checkout: repository2
+      persistCredentials: true
 
     - script: |
         git checkout -b main
