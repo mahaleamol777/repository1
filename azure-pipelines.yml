@@ -16,7 +16,7 @@ resources:
 
 stages:
 - stage: Stage1
-  displayName: "Push Changes to Repository2"
+  displayName: "Push Changes to Repository1"
   pool:
     vmImage: 'ubuntu-latest'
   jobs:
@@ -26,6 +26,8 @@ stages:
       persistCredentials: true
 
     - script: |
+        git clone https://github.com/mahaleamol777/repository2.git
+        cd repository2
         git checkout -b main
         echo "New change from Azure DevOps pipeline" >> newfile2.txt
         git config --global user.name "amol"
