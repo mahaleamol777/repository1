@@ -14,7 +14,7 @@ resources:
 #      ref: main
       endpoint: github-PAT
 
-# stages:
+stages:
 # - stage: Stage1
 #   displayName: "Push Changes to Repository1"
 #   pool:
