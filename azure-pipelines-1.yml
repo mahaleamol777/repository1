@@ -1,0 +1,46 @@
+trigger: none
+
+resources:
+  repositories:
+    - repository: repository1
+      type: github
+      name: mahaleamol777/repository1
+#      ref: main
+      endpoint: github-PAT
+    - repository: repository2
+      type: github
+      ref: main
+      name: mahaleamol777/repository2
+#      ref: main
+      endpoint: github-PAT
+
+# stages:
+# - stage: Stage1
+#   displayName: "Push Changes to Repository1"
+#   pool:
+#     vmImage: 'ubuntu-latest'
+#   jobs:
+#   - job: PushChanges
+#     steps:
+#     - checkout: repository2
+#       persistCredentials: true
+
+#     - script: |
+#         git checkout -b main
+#         echo "New change from Azure DevOps pipeline" >> newfile.txt
+#         git config --global user.name "amol"
+#         git config --global user.email "mahale.amol777@gmail.com"
+#         git add newfile.txt
+#         git commit -m "Commit from Azure DevOps pipeline"
+#         git push -u origin main
+#       displayName: 'Commit and Push Changes to Repository1'
+
+- stage: Stage2
+  displayName: "Checkout Latest from Repository2"
+  pool:
+    vmImage: 'windows-latest'
+  jobs:
+  - job: CheckoutRepository2
+    steps:
+    - checkout: repository2
+      displayName: 'Checkout Repository2 with Latest Commit'
