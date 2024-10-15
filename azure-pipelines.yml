@@ -34,13 +34,3 @@ stages:
         git commit -m "Commit from Azure DevOps pipeline"
         git push -u origin main
       displayName: 'Commit and Push Changes to Repository1'
-
-- stage: Stage2
-  displayName: "Checkout Latest from Repository2"
-  pool:
-    vmImage: 'windows-latest'
-  jobs:
-  - job: CheckoutRepository2
-    steps:
-    - checkout: repository2
-      displayName: 'Checkout Repository2 with Latest Commit'
